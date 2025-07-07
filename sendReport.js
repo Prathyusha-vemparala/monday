@@ -15,7 +15,7 @@ const mailOptions = {
    html: `
     <p>Hello,</p>
     <p>The latest automation test report is ready. You can view it here:</p>
-    <p><a href="https://prathyusha-vemparala.github.io/Email_Integration" target="_blank"> View Allure Report</a></p>
+    <p><a href="https://prathyusha-vemparala.github.io/monday" target="_blank"> View Allure Report</a></p>
     <p>Regards,<br/>Automation Team</p>
   `,
 };
