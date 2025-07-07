@@ -26,6 +26,16 @@ exports.LoginPage = class LoginPage {
       baseUrl
     );
   };
+
+  launchingApp = async (baseUrl) => {
+    await excuteSteps(
+      this.test,
+      await this.page,
+      "navigate",
+      `Launch the smart moving sign-in webpage ${baseUrl}`,
+      baseUrl
+    );
+  };
   clickOnLoginButton = async () => {
     await excuteSteps(
       this.test,

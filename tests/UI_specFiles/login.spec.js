@@ -7,13 +7,14 @@ const { readExcelData } = require("../../utilities/readExcel.js");
 test.describe("Login Tests", () => {
   test("Login using .env credentials", async ({ page }) => {
     const loginPage = new sections.LoginPage(test, page);
-    await loginPage.launchingApplication([process.env.BASE_URL]);
+    await loginPage.launchingApp([process.env.BASE_URL]);
     await loginPage.logInWithValidCredentials(
       [process.env.USER_EMAILID],
       [process.env.PASSWORD]
     );
   });
 
+  
   test("Login with Excel data", async ({ page }) => {
     const excelPath = path.resolve(__dirname, "../../test_Data/userData.xlsx");
     const testData = readExcelData(excelPath, "Sheet1");
@@ -25,3 +26,5 @@ test.describe("Login Tests", () => {
     }
   });
 });
+
+
