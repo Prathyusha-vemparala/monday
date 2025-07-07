@@ -9,7 +9,7 @@ class CustomReporter {
 
   onTestEnd(test, result) {
     this.results.push({
-      name: test.titlePath().join(' > '),
+      name: test.title,
       status: result.status,
     });
   }

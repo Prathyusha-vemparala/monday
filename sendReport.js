@@ -7,10 +7,9 @@ const htmlSummary = fs.readFileSync(path.join(__dirname, 'reporters', 'custom-re
 const allureReportLink = 'https://Prathyusha-vemparala.github.io/monday/';
 
 const htmlEmailBody = `
-  <h2>✅ Playwright Test Summary</h2>
   ${htmlSummary}
   <br><br>
-  <p>📊 <strong>Full Allure Report:</strong> <a href="${allureReportLink}">${allureReportLink}</a></p>
+  <p>📊 <strong>Full Allure Report:</strong> <a href="${allureReportLink}">View allure report</a></p>
 `;
 const transporter = nodemailer.createTransport({
   service: 'gmail',
