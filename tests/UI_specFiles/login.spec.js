@@ -4,7 +4,7 @@ const path = require("path");
 require("dotenv").config();
 const { readExcelData } = require("../../utilities/readExcel.js");
 
-test.describe("Login Tests", () => {
+test.describe("Login to joulez Tests", () => {
   test("Login using .env credentials", async ({ page }) => {
     const loginPage = new sections.LoginPage(test, page);
     await loginPage.launchingApp([process.env.BASE_URL]);
@@ -14,7 +14,7 @@ test.describe("Login Tests", () => {
     );
   });
 
-  
+
   test("Login with Excel data", async ({ page }) => {
     const excelPath = path.resolve(__dirname, "../../test_Data/userData.xlsx");
     const testData = readExcelData(excelPath, "Sheet1");

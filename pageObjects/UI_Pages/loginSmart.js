@@ -11,7 +11,7 @@ exports.LoginSmart = class LoginSmart {
     this.getDemoBtn=page.locator("(//a[@title='Get Demo'][@class='cta_button '])[1]");
     this.firstName=page.locator("//input[@name='firstname']");
     this.lastName=page.locator("//input[@name='lastname']");
-    this.companyName=page.locator("//input[@placeholder='Company Nam']");
+    this.companyName=page.locator("//input[@placeholder='Company Name*']");
     this.getDemoBtn=page.locator("(//a[@title='Get Demo'][@class='cta_button '])[1]");
     
   }

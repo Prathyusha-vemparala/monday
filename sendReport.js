@@ -1,6 +1,17 @@
 const nodemailer = require('nodemailer');
 const path = require('path');
+const fs = require('fs');
 
+const htmlSummary = fs.readFileSync(path.join(__dirname, 'reporters', 'custom-report.html'), 'utf-8');
+
+const allureReportLink = 'https://Prathyusha-vemparala.github.io/monday/';
+
+const htmlEmailBody = `
+  <h2>✅ Playwright Test Summary</h2>
+  ${htmlSummary}
+  <br><br>
+  <p>📊 <strong>Full Allure Report:</strong> <a href="${allureReportLink}">${allureReportLink}</a></p>
+`;
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -12,12 +23,7 @@ const mailOptions = {
   from: '"Test Automation" <automation.reports.qa@gmail.com>',
   to: 'vemparala.prathyusha1999@gmail.com',
   subject: 'Playwright Test Execution Report',
-   html: `
-    <p>Hello,</p>
-    <p>The latest automation test report is ready. You can view it here:</p>
-    <p><a href="https://prathyusha-vemparala.github.io/monday" target="_blank"> View Allure Report</a></p>
-    <p>Regards,<br/>Automation Team</p>
-  `,
+   html: htmlEmailBody,
 };
 transporter.sendMail(mailOptions, function (error, info) {
   if (error) {

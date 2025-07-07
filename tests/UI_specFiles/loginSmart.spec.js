@@ -27,7 +27,6 @@ test.describe("Smart moving Tests", () => {
     await loginSmart.enterFirstName([data.firstname]);
     await page.waitForTimeout(parseInt(process.env.SMALL_WAIT));
     await loginSmart.enterLastName([data.lastname]);
-    await page.waitForTimeout(parseInt(process.env.SMALL_WAIT));
     await loginSmart.enterCompanyName([data.additionalneeds]);
 
     });

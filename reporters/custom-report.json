@@ -1,0 +1,16 @@
+{
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "tests": [
+    {
+      "name": " > chromium > UI_specFiles\\login.spec.js > Login to joulez Tests > Login using .env credentials",
+      "status": "passed"
+    },
+    {
+      "name": " > chromium > UI_specFiles\\login.spec.js > Login to joulez Tests > Login with Excel data",
+      "status": "passed"
+    }
+  ]
+}
